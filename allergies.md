@@ -22,4 +22,4 @@ Pseudoephedrine another decongestant like guaifenesin, an expectorant. When you 
 
 The goal of Zyrtec-D and related is you get two drugs in the same pill. Antihistamine for allergies and a decongestant for clearing out your nose and throat.
 
-Not a doctor, have long history with allergies and an extra depth of knowledge into the drugs and uses from discussions with my doctor.
+**Not a doctor, have long history with allergies and an extra depth of knowledge into the drugs and uses from discussions with my doctor.**
