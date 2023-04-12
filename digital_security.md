@@ -18,7 +18,7 @@ Alaska Senator Ted Stevens infamouse series of tubes *[YouTube](https://www.yout
 
 ## Other
 
-LastPass started in 2008 and popularity
+LastPass started in 2008 and popularity rose along side with 1Password. One main market advantage as initial support included Windows and Android compatability. 1Password initially launched with Apple OS and iPhone only. LastPass gained popularity with mention and review on [TWiT Tech Podcast Network](https://www.youtube.com/watch?v=r9Q_anb7pwg&ab_channel=TWiTTechPodcastNetwork).
 
 # Multi-Factor Authentication (MFA)
 
