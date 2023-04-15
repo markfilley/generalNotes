@@ -1,0 +1,16 @@
+name: lits
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: 
+  pull_request_target:
+    types:
+      - opened
+
+jobs:
+  markdown-check:
+    runs-on: ubuntu-latest
+    container: alpine:latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: apk add ruby
+      - run: gem install mdl
+      - run: mdl -s ./
