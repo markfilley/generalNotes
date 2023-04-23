@@ -1,11 +1,12 @@
 # Story creation software
 
+Story intro
 
 ## non-liniear choose your own adventure writing
 
 [Twine](https://twinery.org/) text only
 
-[Renpy](https://www.renpy.org/) multi-media 
+[Renpy](https://www.renpy.org/) multi-media
 
 ## non-linear and not hyperlinks
 
