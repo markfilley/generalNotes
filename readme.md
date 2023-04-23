@@ -1,3 +1,5 @@
+# General Notes
+
 [allergies](allergies.md)
 
 [data resilience](data_resilience.md)
@@ -9,3 +11,5 @@
 [Parentds Digital Guide](parents_digital_guide.md)
 
 [Story telling software](writing.md)
+
+[other things](other.md)

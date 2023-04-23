@@ -4,8 +4,6 @@ Digital life is fully upon us. Smart phones are the primary way photos are taken
 
 Companion information to the [digital security](digital_security.md) document.
 
-
-
 ## Backups
 
 ### Cloud

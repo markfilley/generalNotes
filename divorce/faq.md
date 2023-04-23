@@ -1,4 +1,6 @@
-1. when does it get better
+# FAQ
+
+1. when does it get better>
 
    - initial signing by judge to be divorced
    - finalized decree
