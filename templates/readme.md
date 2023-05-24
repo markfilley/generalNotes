@@ -1,0 +1,1 @@
+Templates created in Microsoft Word 365. Progam native exports to PDF. Plan on making more formats available when I can manually convert these. Pandoc can conver to markdown (.md) and open document format (.odt), however the formatting is not usable.
