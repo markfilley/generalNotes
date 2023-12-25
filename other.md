@@ -1,4 +1,4 @@
-# Lega notes
+# Legal Notes
 
 [Too Long Didn't Read (TLDR) for software licenses](https://www.tldrlegal.com/)
 
