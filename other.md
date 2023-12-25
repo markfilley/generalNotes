@@ -13,3 +13,4 @@
 http://detectportal.firefox.com/canonical.html
 
 http://captive.apple.com
+
