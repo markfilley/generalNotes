@@ -11,3 +11,5 @@
 # WiFi Captive Portal Detect
 
 http://detectportal.firefox.com/canonical.html
+
+http://captive.apple.com
