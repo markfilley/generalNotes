@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dateRegx='[0-9]{4}\.[0-9]{2}\.[0-9]{2}'
-searchDir="/mnt/c/Users/markf/OneDrive/Documents/legal/travis/discovery/CREDIT/TRUIST 2889"
+searchDir="/mnt/c/Users/markf/OneDrive/Documents/legal/travis/discovery/CREDIT/CHASE 6240"
 #echo "$searchDir"
 #echo "$PWD"
 
@@ -43,6 +43,19 @@ do
   elif [[ -f $entry && ! $entry =~ $dateRegx ]]; then
     echo ""
 
+      if [[ $currentDir =~ "CHASE" ]]; then
+        echo "CHASE files"
+        extension=${fileName: -3}
+        fileDate=${fileName: 0: 8}
+        echo "FileDate: $fileDate"
+        category=${directoryPath[-2]}
+        newFileDate=${fileDate: 0: 4}.${fileDate: 4: 2}.${fileDate: 6: 2}
+
+        newFileName="${newFileDate} ${category} ${currentDir}.${extension}"
+        echo "NewFile: $newFileName"
+        mv "$entry" "$searchDir"/"$newFileName"
+      fi
+
       if [[ $currentDir =~ "BOA" ]]; then
         echo "BOA files"
         extension=${fileName: -3}
@@ -55,20 +68,21 @@ do
         echo "category: $category"
         echo "currentDir: $currentDir"
         echo "NewFile: $newFileName"
-        mv "$entry" "$searchDir"/"$newFileName"
+        # mv "$entry" "$searchDir"/"$newFileName"
       fi
+
 
       if [[ $currentDir =~ "TRUIST" ]]; then
         
         # These file have format April, 2020.pdf make day 01
 
-        tempFileName=$fileName
-        echo "TRUIST files"
-        echo "Truist fileName: $tempFileName"
-        echo "item: $item"
-        extension=${tempFileName: -3}
+        # tempFileName=$fileName
+        # echo "TRUIST files"
+        # echo "Truist fileName: $tempFileName"
+        # echo "item: $item"
+        extension=${fileName: -3}
         #echo "EXTENSION: $extension"
-        fileYear=${tempFileName: -8: -4}
+        fileYear=${fileName: -8: -4}
         #echo "FILE YEAR: $fileYear"
         
         declare -A months
@@ -77,7 +91,7 @@ do
         monthShort=(["jan"]=1 ["feb"]=2 ["mar"]=3 ["apr"]=4 ["may"]=5 ["jun"]=6 ["jul"]=7 ["aug"]=8 ["sep"]=9 ["oct"]=10 ["nov"]=11 ["dec"]=12)
 
         
-        IFS=',' read -ra fileSplit <<< "$tempFileName"
+        IFS=',' read -ra fileSplit <<< "$fileName"
         
         justMonth=${fileSplit[0]}
         echo "just month $justMonth"
@@ -85,11 +99,15 @@ do
         echo "month: $month"
         monthNum=${months[$month]}
         echo "Month num: $monthNum"
-        newFileDate="$fileYear.$monthNum.01"
+        if [[ $monthNum == 10 || $monthNum == 11 || $monthNum == 12 ]]; then
+           newFileDate="$fileYear.$monthNum.01"
+        else
+           newFileDate="$fileYear.0$monthNum.01"
+        fi
         category=${directoryPath[-2]}
         newFileName="${newFileDate} ${category} ${currentDir}.${extension}"
         echo "NEW NAME: $newFileName"
-        # cp "$entry" "$searchDir"/"$newFileName"
+        mv "$entry" "$searchDir"/"$newFileName"
       fi
   else
     echo "no matching"
